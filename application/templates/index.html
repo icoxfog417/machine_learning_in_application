@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/vue/0.12.14/vue.min.js"></script>
+<script type="text/javascript" src="{{ static_url('js/sketch.js') }}"></script>
+<link rel="stylesheet" href="{{ static_url('css/index.css') }}" type="text/css"/>
+{% end %}
+
+{% block bottom %}
+    <script type="text/javascript" src="{{ static_url('js/index.js') }}"></script>
+{% end %}
+
+{% block body %}
+<div id="main" class="column-group gutters">
+    <div align="center" class="all-100 canvas-area">
+        <div>
+            <canvas id="canvas" width="170" height="170"></canvas>
+        </div>
+        <div>
+            <button data-v-on="click: clear" class="ink-button btn-clear">Clear</button>
+            <button data-v-on="click: submit" class="ink-button blue btn-submit">Submit</button>
+        </div>
+        <div style="display:none">
+            <img data-v-attr="src: showImage()"/>
+        </div>
+    </div>
+    <div class="all-100 predicteds">
+        <div data-v-repeat="predicts" data-v-component="predict-item" >
+        </div>
+        <br style="clear:both"/>
+    </div>
+</div>
+
+<script id="predict-item" type="x-template">
+    <div class="result">
+        <div style="float:left">
+            <img data-v-attr="src: $data.imageSrc()"/>
+        </div>
+        <div style="width:20px;float:left;font-size:20px">
+            <i class="fa fa-arrow-right"></i>
+        </div>
+        <div data-v-text="$data.state.value" data-v-show="!$data.state.editing" data-v-on="click: beginEdit" class="answer">
+        </div>
+        <input data-v-model="$data.state.value" data-v-show="$data.state.editing" data-v-on="keyup:endEdit | key 'enter'" type="number" name="result" class="answer">
+        <br style="clear:both">
+    </div>
+</script>
+
+{% module xsrf_form_html() %}
+{% end %}

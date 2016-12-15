@@ -1,0 +1,13 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-32
+conda=4.2.13=py35_0
+conda-env=2.6.0=0
+requests=2.12.3=py35_0
+cython=0.25.1=py35_0
+numpy=1.11.2=py35_0
+pip=9.0.1=py35_1
+python=3.5.2=0
+scikit-learn=0.18.1=np111py35_0
+scipy=0.18.1=np111py35_0
+setuptools=27.2.0=py35_1

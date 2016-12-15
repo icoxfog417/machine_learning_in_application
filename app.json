@@ -1,0 +1,13 @@
+{
+    "name": "Machine Learning in Application",
+    "description": "handwritten number recognizer by chainer",
+    "repository": "https://github.com/icoxfog417/number_recognizer",
+    "keywords": ["Python", "tornado", "scikit-learn"],
+    "env": {
+        "BUILDPACK_URL": "https://github.com/kennethreitz/conda-buildpack",
+        "SECRET_TOKEN": {
+          "description": "A secret key for verifying the integrity of signed cookies.",
+          "generator": "secret"
+      }
+    }
+}

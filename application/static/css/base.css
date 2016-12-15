@@ -1,0 +1,14 @@
+body {
+    background: #ededed;
+}
+
+header h1 small:before  {
+    content: "|";
+    margin: 0 0.5em;
+    font-size: 1.6em;
+}
+
+footer {
+    background: #ccc;
+}
+

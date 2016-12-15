@@ -1,0 +1,34 @@
+.canvas-area{
+    background-color:lavender;
+    border-radius:10px;
+    padding: 10px 0px;
+}
+#canvas{
+    border: 1px solid silver;
+    background-color:white
+}
+.btn-submit{
+    width: 82px;
+}
+.btn-clear{
+    width: 82px;
+}
+.predicteds{
+    background-color:whitesmoke;
+}
+.result {
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    float:left;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid lightsteelblue;
+}
+.result .answer {
+    font-size: 100px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    float:left;
+}

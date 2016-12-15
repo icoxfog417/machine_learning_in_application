@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Number Recognition</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/css/ink.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/css/font-awesome.min.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/js/ink-all.min.js"></script>
+
+    <link rel="stylesheet" href="{{ static_url('css/base.css') }}" type="text/css"/>
+    {% block head %}{% end %}
+</head>
+<body>
+    <div class="ink-grid">
+        <header class="vertical-space">
+            <h1>Number Recognizer<small>powerd by Chainer</small></h1>
+        </header>
+        <div>
+            {% block body %}{% end %}
+        </div>
+    </div>
+    {% block bottom %}{% end %}
+</body>
+</html>
