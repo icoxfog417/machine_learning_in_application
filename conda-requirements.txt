@@ -4,9 +4,9 @@
 nomkl
 requests=2.12.3=py35_0
 cython=0.25.1=py35_0
-numpy=1.11.2=py35_0
+numpy=1.11.2=py35_nomkl_0
 pip=9.0.1=py35_1
 python=3.5.2=0
-scikit-learn=0.18.1=np111py35_0
-scipy=0.18.1=np111py35_0
+scikit-learn=0.18.1=np111py35_nomkl_0
+scipy=0.18.1=np111py35_nomkl_0
 setuptools=27.2.0=py35_0
