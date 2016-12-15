@@ -20,10 +20,18 @@ class PredictionHandler(tornado.web.RequestHandler):
         data = self.get_arguments("data[]")
 
         r = Resource()
-        model = ModelAPI(r)
+        if not os.path.isdir(r.model_path):
+            from ml.model import NumberRecognizeNN
+            from ml.trainer import Trainer
+            model = NumberRecognizeNN(r.INPUT_SIZE, r.OUTPUT_SIZE)
+            trainer = Trainer(model, r)
+            x, y = r.load_training_data()
+            trainer.train(x, y)
+        api = ModelAPI(r)
+
         if len(data) > 0:
             _data = [float(d) for d in data]
-            predicted = model.predict(_data)
+            predicted = api.predict(_data)
             resp["result"] = str(predicted[0])
 
         self.write(resp)
