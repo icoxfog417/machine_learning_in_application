@@ -10,3 +10,5 @@ python=3.5.2=0
 scikit-learn=0.18.1=np111py35_nomkl_0
 scipy=0.18.1=np111py35_nomkl_0
 setuptools=27.2.0=py35_0
+libgfortran=3.0.0=1
+openblas=0.2.14=4
