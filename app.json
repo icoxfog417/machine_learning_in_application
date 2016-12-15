@@ -4,7 +4,7 @@
     "repository": "https://github.com/icoxfog417/machine_learning_in_application",
     "keywords": ["Python", "tornado", "Chainer"],
     "env": {
-        "BUILDPACK_URL": "https://github.com/kennethreitz/conda-buildpack",
+        "BUILDPACK_URL": "https://github.com/icoxfog417/conda-buildpack.git#patched",
         "SECRET_TOKEN": {
           "description": "A secret key for verifying the integrity of signed cookies.",
           "generator": "secret"
