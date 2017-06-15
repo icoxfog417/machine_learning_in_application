@@ -18,10 +18,13 @@ Practical implemantation of Machine Learning in the Application.
 
 handwritten number recognizer by Chainer.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+You can deploy this application by docker.
 
-If you want to create the application from command line, please use the below command.
+Please refer [this](https://devcenter.heroku.com/articles/container-registry-and-runtime) tutorial to deploy the application.
 
-```
-heroku create --buildpack https://github.com/kennethreitz/conda-buildpack.git
-```
+* `heroku plugins:install heroku-container-registry`
+* `heroku container:login`
+* `git clone https://github.com/icoxfog417/machine_learning_in_application.git`
+* `heroku create`
+* `heroku container:push web`
+* `heroku open`
