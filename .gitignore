@@ -70,6 +70,7 @@ target/
 # iPython notebook
 .ipynb_checkpoints
 
+.vscode
 data
 !data/.gitkeep
 ml/store/*
